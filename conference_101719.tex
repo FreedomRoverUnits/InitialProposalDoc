@@ -58,49 +58,52 @@ There are multiple ways we can get the rovers to perceive their surroundings, in
 \section{Methods and Planning}
 
 
-\subsection{Abbreviations and Acronyms}\label{AA}
+\subsection{Initial Timeline and Project Tasks}\label{AA}
+Here is the initial timeline for the project broken down into individual tasks:
+\begin{itemize}
+	\item May: Assemble Rover/PCB
+	\begin{itemize}
+		\item Main goal is to make the custom PCB for power module and motor drivers
+		\item Buy parts: Motor, Chassis, LiPo Battery, development boards, environment sensing parts
+		\item Test PCB and parts to make sure they are functional and understand how to interface with them
+	\end{itemize}
+	\item June: Setup ROS/Code Framework
+	\begin{itemize}
+		\item Use ROS to create initial code for the multi-agent server to assist Rovers
+		\item Also use ROS to manipulate and control motors to allow Rover to move
+		\item Begin interfacing with sensors and other components
+	\end{itemize}
+	\item July: Setup ability to see environment
+	\begin{itemize}
+		\item Setup Lidar/Computer Vision
+		\item Get Rovers to build map of their environment SLAM
+		\item Ensure rovers can move through environment without colliding
+	\end{itemize}
+	\item August: Get Rover to move in consistent manner
+	\begin{itemize}
+		\item Finish up main part of Rover framework
+		\item Get the Rovers to move in a set pattern
+	\end{itemize}
+	\item September: Setup central server/Test Communication
+	\begin{itemize}
+		\item Finish creating ROS multi-agen server
+		\item Get the server to communicate with Rovers
+		\item Test reaction time between server and Rovers
+	\end{itemize}
+	\item October: Rover will work together on a task
+	\begin{itemize}
+		\item Get Rover to push box
+		\item Get Rovers to dance around
+		\item Or get Rovers to complete another demo that is list later
+	\end{itemize}
+	\item November/December: Debug and finish up Project
+	\begin{itemize}
+		\item These are free months to use to buffer if the project falls behind or need extra time to debug
+	\end{itemize}
+\end{itemize}
+\subsection{Project Resources}
+In order to finish the project on time we will need to deploy the use of external tools to assist in its completion. Luckily there are many tools at disposable to get the rovers on their wheels and working together. The first and biggest resource the project will be using is the Robot Operating System, ROS for short. ROS is a tool that is made to interface well with robotics, offering a multitude of tools to help simplify the process. These tools range from helping enable the rovers to use SLAM to even PID control for controlling the motors. Raspberry Pi and ESP32 can be flashed with versions of ROS. With the assistance of ROS implementing control/deploying the rovers will be simplified to focus on other aspects of the project. Although the use of ROS enables an easier deployment of the tools needed for the project, simulations are an integral part of ensuring that the rovers operate as intended. To create simulations of the swarm, Gazebo will address this issue. Gazebo is 3D simulation software that integrates well with ROS. However, simulations of how the rover moves is only one part of the testing process.
 
-\subsection{Units}
-
-
-\subsection{Equations}
-
-
-\subsection{\LaTeX-Specific Advice}
-
-
-\subsection{Some Common Mistakes}\label{SCM}
-
-\subsection{Authors and Affiliations}
-
-\subsection{Identify the Headings}
-
-\subsection{Figures and Tables}
-
-\begin{table}[htbp]
-\caption{Table Type Styles}
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{Table}&\multicolumn{3}{|c|}{\textbf{Table Column Head}} \\
-\cline{2-4} 
-\textbf{Head} & \textbf{\textit{Table column subhead}}& \textbf{\textit{Subhead}}& \textbf{\textit{Subhead}} \\
-\hline
-copy& More table copy$^{\mathrm{a}}$& &  \\
-\hline
-\multicolumn{4}{l}{$^{\mathrm{a}}$Sample of a Table footnote.}
-\end{tabular}
-\label{tab1}
-\end{center}
-\end{table}
-
-\begin{figure}[htbp]
-\centerline{\includegraphics{fig1.png}}
-\caption{Example of a figure caption.}
-\label{fig}
-\end{figure}
-
-``Temperature/K''.
 \section{Discussion}
 Testing will be done regularly from the first-day our components arrive to assure quality and functionality. As we assemble each component together, testing will help in debugging and localizing the issue in the system. Creating tests for each component helps with creating a good understanding on how that device individually works as well as how it interacts with other devices and software. On the topic of software, testing is of critical importance, without testing the software integration could lead to unforeseen behavior within the system as a whole. If our tests were done correctly, on demo day it will present our flawless creation, the freedom rover units to the world.
 \section{Demo Description} 
